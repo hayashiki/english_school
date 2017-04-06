@@ -1,0 +1,72 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, a, p, img, ul, li, label, h1, h2, h3, h4, h5, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html, body, {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 50px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.information {
+  margin-left: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-characteristic,
+.nav-courses,
+.nav-expense,
+.nav-becoming,
+.nav-classroom,
+.nav-inquiry {
+  height: 50px;
+}
+
+#show,
+#characteristic,
+#courses,
+#expense,
+#becoming,
+#classroom,
+#inquiry {
+  height: 300px;
+  border: 1px solid #646464;
+}
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: #FFFFFF;
+  background-color: deepskyblue;
+  padding: 10px 0;
+}
