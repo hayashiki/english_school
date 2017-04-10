@@ -51,15 +51,148 @@ nav {
   height: 50px;
 }
 
-#show,
+#becoming,
+#classroom,
+#inquiry {
+  height: 400px;
+}
+
 #characteristic,
 #courses,
 #expense,
 #becoming,
 #classroom,
 #inquiry {
+  border-top: 2px solid deepskyblue;
+}
+
+#show {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 10px 0;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+.show__image {
+  width: 50%;
   height: 300px;
-  border: 1px solid #646464;
+  object-fit: contain;
+}
+
+.expense__header--wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.expense__header--notify {
+  margin: 10px;
+  padding: 0 10px;
+  border-radius: 10px;
+  background-color: #80deea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.characteristic__header,
+.courses__header,
+.expense__header,
+.becoming__header,
+.classroom__header,
+.inquiry__header {
+  height: 50px;
+  width: 200px;
+  background-color: deepskyblue;
+  border-radius: 0 0 10px 10px / 0 0 10px 10px;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.characteristic__content {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.characteristic__comments {
+  width: 50%;
+  padding-left: 20px;
+}
+
+.characteristic__comments--title {
+  border-bottom: 2px solid orange;
+  line-height: 2.2em;
+}
+
+.characteristic__image {
+  width: 50%;
+  padding: 0 50px;
+}
+
+.characteristic__image--view {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.courses__content {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 10px 0;
+}
+
+.courses__card {
+  height: 250px;
+}
+
+.courses__card--header {
+  display: flex;
+}
+
+.courses__card--type {
+  width: 150px;
+  height: 50px;
+  border: 1px solid #ddd;
+  border-top: 3px solid orange;
+  box-shadow:0px 3px 6px 0px #ccc;
+  color: orange;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.courses__card--image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.expense__content {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 10px;
+}
+
+.expense__card {
+  border: 1px solid #ddd;
+  border-top: 3px solid orange;
+  box-shadow:0px 3px 6px 0px #ccc;
+  height: 280px;
+  /*margin: 0 10px;*/
+}
+
+.expense__card--title {
+  display: flex;
+  justify-content: center;
+  color: orange;
 }
 
 footer {
