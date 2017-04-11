@@ -51,9 +51,7 @@ nav {
   height: 50px;
 }
 
-#becoming,
-#classroom,
-#inquiry {
+#becoming {
   height: 400px;
 }
 
@@ -193,6 +191,66 @@ nav {
   display: flex;
   justify-content: center;
   color: orange;
+}
+
+.expense__card--list {
+  list-style: none;
+  padding-left: 8px;
+}
+
+.classroom__content {
+  padding: 20px 0;
+}
+
+.classroom__teacher--info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.classroom__teachers {
+  display: flex;
+}
+
+.classroom__teacher {
+  border: 1px solid #bbb;
+  height: 380px;
+  margin: 0 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.classroom__teacher--image {
+  border-top: 3px solid deepskyblue;
+  width: 140px;
+  padding: 20px 0;
+}
+
+.classroom__teacher--image img {
+  border-radius: 140px;
+  border: 1px solid #ccc;
+  width: 140px;
+  height: 140px;
+}
+
+.classroom__teacher--name {
+  font-size: 1.4em;
+  display: flex;
+  justify-content: center;
+}
+
+.classroom__map {
+  display: flex;
+  justify-content: center;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.inquiry__form {
+  background-color: deepskyblue;
 }
 
 footer {
