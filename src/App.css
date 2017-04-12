@@ -1,0 +1,263 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, a, p, img, ul, li, label, h1, h2, h3, h4, h5, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html, body, {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 50px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.information {
+  margin-left: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-characteristic,
+.nav-courses,
+.nav-expense,
+.nav-becoming,
+.nav-classroom,
+.nav-inquiry {
+  height: 50px;
+}
+
+#becoming {
+  height: 400px;
+}
+
+#characteristic,
+#courses,
+#expense,
+#becoming,
+#classroom,
+#inquiry {
+  border-top: 2px solid deepskyblue;
+}
+
+#show {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 10px 0;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+.show__image {
+  width: 50%;
+  height: 300px;
+  object-fit: contain;
+}
+
+.expense__header--wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.expense__header--notify {
+  margin: 10px;
+  padding: 0 10px;
+  border-radius: 10px;
+  background-color: #80deea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.characteristic__header,
+.courses__header,
+.expense__header,
+.becoming__header,
+.classroom__header,
+.inquiry__header {
+  height: 50px;
+  width: 200px;
+  background-color: deepskyblue;
+  border-radius: 0 0 10px 10px / 0 0 10px 10px;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.characteristic__content {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.characteristic__comments {
+  width: 50%;
+  padding-left: 20px;
+}
+
+.characteristic__comments--title {
+  border-bottom: 2px solid orange;
+  line-height: 2.2em;
+}
+
+.characteristic__image {
+  width: 50%;
+  padding: 0 50px;
+}
+
+.characteristic__image--view {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.courses__content {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 10px 0;
+}
+
+.courses__card {
+  height: 250px;
+}
+
+.courses__card--header {
+  display: flex;
+}
+
+.courses__card--type {
+  width: 150px;
+  height: 50px;
+  border: 1px solid #ddd;
+  border-top: 3px solid orange;
+  box-shadow:0px 3px 6px 0px #ccc;
+  color: orange;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.courses__card--image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.expense__content {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 10px;
+}
+
+.expense__card {
+  border: 1px solid #ddd;
+  border-top: 3px solid orange;
+  box-shadow:0px 3px 6px 0px #ccc;
+  height: 280px;
+  /*margin: 0 10px;*/
+}
+
+.expense__card--title {
+  display: flex;
+  justify-content: center;
+  color: orange;
+}
+
+.expense__card--list {
+  list-style: none;
+  padding-left: 8px;
+}
+
+.classroom__content {
+  padding: 20px 0;
+}
+
+.classroom__teacher--info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.classroom__teachers {
+  display: flex;
+}
+
+.classroom__teacher {
+  border: 1px solid #bbb;
+  height: 380px;
+  margin: 0 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.classroom__teacher--image {
+  border-top: 3px solid deepskyblue;
+  width: 140px;
+  padding: 20px 0;
+}
+
+.classroom__teacher--image img {
+  border-radius: 140px;
+  border: 1px solid #ccc;
+  width: 140px;
+  height: 140px;
+}
+
+.classroom__teacher--name {
+  font-size: 1.4em;
+  display: flex;
+  justify-content: center;
+}
+
+.classroom__map {
+  display: flex;
+  justify-content: center;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.inquiry__form {
+  background-color: deepskyblue;
+}
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: #FFFFFF;
+  background-color: deepskyblue;
+  padding: 10px 0;
+}
