@@ -1,15 +1,34 @@
 import React, { Component } from 'react';
+import {firebaseDb} from './firebase/'
+const ref = firebaseDb.ref('contact');
 import './App.css';
 
+
 class App extends Component {
+
+  constructor(){
+    super();
+    this._hundleSubmit = this._hundleSubmit.bind(this);
+  }
+
+// todo いい感じにformの値をとってくる
+  _hundleSubmit(){
+    ref.push({
+      subscribedToMailingList: true,
+      email: "peperoncino.pop@gmail.com",
+      text1: "aaaaa",
+      text2: false,
+      text3: true
+    })
+  }
+
   render() {
     return (
       <div className="App">
-
         <header>
           <img className="logo" src="images/logo.png"></img>
           <div className="title">
-            <div>Benesseこども英語教室</div>
+            <div onClick={this._hundleSubmit}>Benesseこども英語教室</div>
             <div>松江教室 英会話のP.E.C</div>
           </div>
           <div className="information">TEL: 123-456-789受付10:00 ~ 17:00</div>
@@ -445,7 +464,7 @@ class App extends Component {
               </div>
             </div>
             <div className="col-md-6 inquiry__form--wrapper">
-              <form className="inquiry__form">
+              <form className="inquiry__form" onClick={this._hundleSubmit}>
                 <input className="inquiry__form--input" type="text" placeholder="*お名前" required />
                 <input className="inquiry__form--input" type="email" placeholder="*E-mail" required />
                 <input className="inquiry__form--input" type="text" placeholder="TEL" />
