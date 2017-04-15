@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-html, body, div, span, a, p, img, ul, li, label, h1, h2, h3, h4, h5, input {
+html, body, div, span, a, p, img, ul, li, label, h1, h2, h3, h4, h5, input, textarea {
   margin: 0;
   padding: 0;
   border: 0;
@@ -51,10 +51,6 @@ nav {
   height: 50px;
 }
 
-#becoming {
-  height: 400px;
-}
-
 #characteristic,
 #courses,
 #expense,
@@ -72,6 +68,14 @@ nav {
 
 .row {
   margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
 }
 
 .show__image {
@@ -176,15 +180,14 @@ nav {
 .expense__content {
   width: 100%;
   overflow: hidden;
-  padding: 20px 10px;
+  padding: 10px 0;
 }
 
 .expense__card {
   border: 1px solid #ddd;
   border-top: 3px solid orange;
   box-shadow:0px 3px 6px 0px #ccc;
-  height: 280px;
-  /*margin: 0 10px;*/
+  margin: 10px 0;
 }
 
 .expense__card--title {
@@ -195,7 +198,28 @@ nav {
 
 .expense__card--list {
   list-style: none;
-  padding-left: 8px;
+  padding: 5px 8px;
+}
+
+.becoming__content {
+  padding: 20px;
+}
+
+.becoming__step {
+  padding: 5px;
+}
+
+.becoming__step:not(:last-child) {
+  border-bottom: 1px dashed #ccc;
+}
+
+.becoming__step--title {
+  color: deepskyblue;
+  font-size: 1.2em;
+}
+
+.becoming__step--text {
+  padding: 10px;
 }
 
 .classroom__content {
@@ -245,12 +269,92 @@ nav {
   justify-content: center;
 }
 
-.no-padding {
-  padding: 0;
+.inquiry__content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.inquiry__info {
+  padding: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.inquiry__lesson {
+  display: flex;
+}
+
+.inquiry__trial,
+.inquiry__apply {
+  width: 150px;
+  height: 80px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inquiry__trial {
+  background-color: red;
+}
+
+.inquiry__apply {
+  background-color: dodgerblue;
+}
+
+.inquiry__document {
+  background-color: green;
+  margin: 20px auto;
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.inquiry__form--wrapper {
+  background-color: deepskyblue;
 }
 
 .inquiry__form {
-  background-color: deepskyblue;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.inquiry__form--input {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 8px 0;
+  color: white;
+}
+
+.inquiry__form--textarea {
+  height: 150px;
+  resize: none;
+}
+
+.inquiry__form--input:focus {
+  box-shadow: 0 0 0 2px white;
+}
+
+.inquiry__form--input::-webkit-input-placeholder {
+  color: white;
+}
+
+.inquiry__form--button {
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 10px;
+  margin: 8px auto;
+  color: white;
+  width: 200px;
 }
 
 footer {
@@ -259,5 +363,6 @@ footer {
   align-items: center;
   color: #FFFFFF;
   background-color: deepskyblue;
-  padding: 10px 0;
+  padding: 20px 0;
+  line-height: 1.7em;
 }
