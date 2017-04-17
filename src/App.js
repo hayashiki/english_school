@@ -12,7 +12,7 @@ class App extends Component {
   }
 
 // todo いい感じにformの値をとってくる
-  _hundleSubmit(){
+  _hundleSubmit() {
     ref.push({
       subscribedToMailingList: true,
       email: "peperoncino.pop@gmail.com",
@@ -24,7 +24,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div id="container">
         <header>
           <img className="logo" src="images/logo.png"></img>
           <div className="title">
@@ -50,8 +50,8 @@ class App extends Component {
             <b>特色・こだわり</b>
             <small>characteristic</small>
           </div>
-          <div className="characteristic__content">
-            <div className="characteristic__comments">
+          <div className="row characteristic__content">
+            <div className="col-md-6 characteristic__comments">
               <div className="characteristic__comments--title"><b>イード・アワード賞にて顧客満足度で部門賞を獲得しました！</b></div>
               <p>イード・アワード2016 こども英語教室 顧客満足度（幼児の部）</p>
               <p>先生がよい英語教室 部門賞</p>
@@ -59,11 +59,10 @@ class App extends Component {
               <p>コスパのよい英語教室 部門賞</p>
               <p><a href="http://www.iid.co.jp/"><b>受賞結果はこちら</b></a>（外部サイト: 株式会社イード ホームページ）</p>
               <br />
-
               <div className="characteristic__comments--title"><b>「英語が楽しい」「もっと話したい」という意欲を育む</b></div>
               <p>英会話の主役は講師ではなく、子どもたち。「フレーズを覚えて・繰り返す」だけではなく、「理解した言い方を、自分の言いたいことで使ってみる」体験が重要です。その時期の子どもの興味・関心、動機づけを深く理解したレッスンがここにあります。</p>
             </div>
-            <div className="characteristic__image">
+            <div className="col-md-6 characteristic__image">
               <img src="images/image-5.png" className="characteristic__image--view"></img>
             </div>
           </div>
@@ -73,17 +72,16 @@ class App extends Component {
             <b>コース</b>
             <small>courses</small>
           </div>
-
           <div className="courses__content">
             <div className="row">
               <div className="col-md-4 courses__card">
                 <div className="courses__card--header">
                   <div className="courses__card--title">
-                    <div className="courses__card--type">
+                    <div className="courses__card--type courses--kids">
                       <b>Kidsコース</b>
                       <b>幼児（３〜６歳）</b>
                     </div>
-                    <div>
+                    <div className="courses__card--text">
                       <b>しまじろうと一緒に英語耳を育てる</b>
                     </div>
                   </div>
@@ -96,11 +94,11 @@ class App extends Component {
               <div className="col-md-4 courses__card">
                 <div className="courses__card--header">
                   <div className="courses__card--title">
-                    <div className="courses__card--type">
-                      <b>Kidsコース</b>
-                      <b>幼児（３〜６歳）</b>
+                    <div className="courses__card--type courses--elementary">
+                      <b>Elementaryコース</b>
+                      <b>小学１・２年生</b>
                     </div>
-                    <div>
+                    <div className="courses__card--text">
                       <b>しまじろうと一緒に英語耳を育てる</b>
                     </div>
                   </div>
@@ -113,11 +111,11 @@ class App extends Component {
               <div className="col-md-4 courses__card">
                 <div className="courses__card--header">
                   <div className="courses__card--title">
-                    <div className="courses__card--type">
-                      <b>Kidsコース</b>
-                      <b>幼児（３〜６歳）</b>
+                    <div className="courses__card--type courses--intermediate">
+                      <b>Intermediateコース</b>
+                      <b>小学３・４年生</b>
                     </div>
-                    <div>
+                    <div className="courses__card--text">
                       <b>しまじろうと一緒に英語耳を育てる</b>
                     </div>
                   </div>
@@ -130,11 +128,11 @@ class App extends Component {
               <div className="col-md-4 courses__card">
                 <div className="courses__card--header">
                   <div className="courses__card--title">
-                    <div className="courses__card--type">
-                      <b>Kidsコース</b>
-                      <b>幼児（３〜６歳）</b>
+                    <div className="courses__card--type courses--advanced">
+                      <b>Advancedコース</b>
+                      <b>小学５・６年生</b>
                     </div>
-                    <div>
+                    <div className="courses__card--text">
                       <b>しまじろうと一緒に英語耳を育てる</b>
                     </div>
                   </div>
@@ -147,28 +145,11 @@ class App extends Component {
               <div className="col-md-4 courses__card">
                 <div className="courses__card--header">
                   <div className="courses__card--title">
-                    <div className="courses__card--type">
-                      <b>Kidsコース</b>
-                      <b>幼児（３〜６歳）</b>
+                    <div className="courses__card--type courses--teens">
+                      <b>Teensコース</b>
+                      <b>中学１・２年生</b>
                     </div>
-                    <div>
-                      <b>しまじろうと一緒に英語耳を育てる</b>
-                    </div>
-                  </div>
-                  <img src="images/image-3.jpg" className="courses__card--image" />
-                </div>
-                <div className="courses__card--content">
-                  聴覚機能が完成する小学校低学年ごろまでに、たくさんの英語を聞いたり話したりすることで英語独自の音やリズムが聞き取れる「英語耳」を育てることができます。
-                </div>
-              </div>
-              <div className="col-md-4 courses__card">
-                <div className="courses__card--header">
-                  <div className="courses__card--title">
-                    <div className="courses__card--type">
-                      <b>Kidsコース</b>
-                      <b>幼児（３〜６歳）</b>
-                    </div>
-                    <div>
+                    <div className="courses__card--text">
                       <b>しまじろうと一緒に英語耳を育てる</b>
                     </div>
                   </div>
@@ -187,13 +168,13 @@ class App extends Component {
               <b>受講費</b>
               <small>expense</small>
             </div>
-            <div className="expense__header--notify">入会金 5,000円（＋税）</div>
+            <div className="expense__header--notify">入会金 5,000円(+税)</div>
           </div>
           <div className="expense__content">
             <div className="row">
               <div className="col-md-4">
-                <div className="expense__card">
-                  <div className="expense__card--title">
+                <div className="expense__card expense__card--kids">
+                  <div className="expense__card--title expense__title--kids">
                     <b>Kidsコース 幼児（３〜６歳）</b>
                   </div>
                   <div className="expense__card--content">
@@ -225,9 +206,9 @@ class App extends Component {
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="expense__card">
-                  <div className="expense__card--title">
-                    <b>Kidsコース 幼児（３〜６歳）</b>
+                <div className="expense__card expense__card--elementary">
+                  <div className="expense__card--title expense__title--elementary">
+                    <b>Elementaryコース 小学１・２年生</b>
                   </div>
                   <div className="expense__card--content">
                     <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>１回５０分・全４２回 </b></li>
@@ -258,9 +239,9 @@ class App extends Component {
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="expense__card">
-                  <div className="expense__card--title">
-                    <b>Kidsコース 幼児（３〜６歳）</b>
+                <div className="expense__card expense__card--intermediate">
+                  <div className="expense__card--title expense__title--intermediate">
+                    <b>Intermediateコース 小学３・４年生</b>
                   </div>
                   <div className="expense__card--content">
                     <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>１回５０分・全４２回 </b></li>
@@ -291,9 +272,9 @@ class App extends Component {
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="expense__card">
-                  <div className="expense__card--title">
-                    <b>Kidsコース 幼児（３〜６歳）</b>
+                <div className="expense__card expense__card--advanced">
+                  <div className="expense__card--title expense__title--advanced">
+                    <b>Advancedコース 小学５・６年生</b>
                   </div>
                   <div className="expense__card--content">
                     <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>１回５０分・全４２回 </b></li>
@@ -324,9 +305,9 @@ class App extends Component {
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="expense__card">
-                  <div className="expense__card--title">
-                    <b>Kidsコース 幼児（３〜６歳）</b>
+                <div className="expense__card expense__card--teens">
+                  <div className="expense__card--title expense__title--teens">
+                    <b>Teensコース 中学１・２年生</b>
                   </div>
                   <div className="expense__card--content">
                     <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>１回５０分・全４２回 </b></li>
@@ -468,17 +449,17 @@ class App extends Component {
                 <input className="inquiry__form--input" type="text" placeholder="*お名前" required />
                 <input className="inquiry__form--input" type="email" placeholder="*E-mail" required />
                 <input className="inquiry__form--input" type="text" placeholder="TEL" />
-                <textarea className="inquiry__form--input inquiry__form--textarea" type="textarea" placeholder="*お問い合わせ内容&#13;&#10;&#13;&#10;英語教室に関する疑問・質問をご入力下さい。&#13;&#10;翻訳業務に関するお問い合わせもこちらからどうぞ。" required />
+                <textarea className="inquiry__form--input inquiry__form--textarea" type="textarea" placeholder="*お問い合わせ内容&#13;&#10;英語教室に関する疑問・質問をご入力下さい。&#13;&#10;翻訳業務に関するお問い合わせもこちらからどうぞ。" required />
                 <input className="inquiry__form--button" type="submit" />
               </form>
             </div>
           </div>
         </div>
         <footer>
-          <div>Benesseこども英語教室 松江教室</div>
-          <div>〒 609-0826 島根県松江市学園2丁目5-13 : TEL 123-456-789</div>
-          <div>株式会社P.E.Cは株式会社ベネッセコーポレーションと提携してBenesseこども教室を運営しております。</div>
-          <div>Copyright (c) P.E.C  All right reserved.</div>
+          <p>Benesseこども英語教室 松江教室</p>
+          <p>〒 609-0826 島根県松江市学園2丁目5-13 : TEL 123-456-789</p>
+          <p>株式会社P.E.Cは株式会社ベネッセコーポレーションと提携してBenesseこども教室を運営しております。</p>
+          <p>Copyright (c) P.E.C  All right reserved.</p>
         </footer>
       </div>
     );
