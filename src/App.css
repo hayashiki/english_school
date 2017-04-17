@@ -23,6 +23,11 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+/*#container {
+  margin: 0 auto;
+  width: 1200px;
+}*/
+
 header {
   display: flex;
   flex-flow: row nowrap;
@@ -94,6 +99,7 @@ nav {
   padding: 0 10px;
   border-radius: 10px;
   background-color: #80deea;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,14 +123,10 @@ nav {
 }
 
 .characteristic__content {
-  display: flex;
-  flex-flow: row nowrap;
-  width: 100%;
   padding: 20px 0;
 }
 
 .characteristic__comments {
-  width: 50%;
   padding-left: 20px;
 }
 
@@ -134,7 +136,6 @@ nav {
 }
 
 .characteristic__image {
-  width: 50%;
   padding: 0 50px;
 }
 
@@ -158,13 +159,21 @@ nav {
   display: flex;
 }
 
+.courses__card--title {
+  flex-grow: 1;
+}
+
+.courses__card--text {
+  padding: 10px 0;
+}
+
 .courses__card--type {
-  width: 150px;
+  width: 200px;
   height: 50px;
   border: 1px solid #ddd;
-  border-top: 3px solid orange;
+  border-top: 3px solid #424242;
   box-shadow:0px 3px 6px 0px #ccc;
-  color: orange;
+  color: #424242;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -177,6 +186,31 @@ nav {
   object-fit: cover;
 }
 
+.courses--kids {
+  border-top: 3px solid orange;
+  color: orange;
+}
+
+.courses--elementary {
+  border-top: 3px solid deepskyblue;
+  color: deepskyblue;
+}
+
+.courses--intermediate {
+  border-top: 3px solid tomato;
+  color: tomato;
+}
+
+.courses--advanced {
+  border-top: 3px solid greenyellow;
+  color: greenyellow;
+}
+
+.courses--teens {
+  border-top: 3px solid purple;
+  color: purple;
+}
+
 .expense__content {
   width: 100%;
   overflow: hidden;
@@ -185,20 +219,59 @@ nav {
 
 .expense__card {
   border: 1px solid #ddd;
-  border-top: 3px solid orange;
+  border-top: 3px solid #646464;
   box-shadow:0px 3px 6px 0px #ccc;
   margin: 10px 0;
+}
+
+.expense__card--table {
+  padding: 8px;
 }
 
 .expense__card--title {
   display: flex;
   justify-content: center;
-  color: orange;
+  color: #646464;
 }
 
 .expense__card--list {
   list-style: none;
   padding: 5px 8px;
+}
+
+.expense__card--kids {
+  border-top: 3px solid orange;
+}
+.expense__title--kids {
+  color: orange;
+}
+
+.expense__card--elementary {
+  border-top: 3px solid deepskyblue;
+}
+.expense__title--elementary {
+  color: deepskyblue;
+}
+
+.expense__card--intermediate {
+  border-top: 3px solid tomato;
+}
+.expense__title--intermediate {
+  color: tomato;
+}
+
+.expense__card--advanced {
+  border-top: 3px solid greenyellow;
+}
+.expense__title--advanced {
+  color: greenyellow;
+}
+
+.expense__card--teens {
+  border-top: 3px solid purple;
+}
+.expense__title--teens {
+  color: purple;
 }
 
 .becoming__content {
@@ -356,6 +429,9 @@ nav {
   color: white;
   width: 200px;
 }
+.inquiry__form--button:hover {
+  box-shadow: 0 0 0 2px white;
+}
 
 footer {
   display: flex;
@@ -363,6 +439,7 @@ footer {
   align-items: center;
   color: #FFFFFF;
   background-color: deepskyblue;
-  padding: 20px 0;
+  padding: 20px 10px;
   line-height: 1.7em;
+  text-align: center;
 }
