@@ -1,8 +1,41 @@
 # English School HP
 
+# your need
+- firebase account
+- yarn
+- Node.js
+
+# firebase setup
+
+```
+yarn global add firebase-tools
+cp .firebaserc.sample .firebaserc
+cp config/.firebaserc.sample .firebaserc
+```
+
+```:.firebaserc
+{
+  "projects": {
+    "default": "your-projedt-id"
+  }
+}
+```
+
+```:src/firebase/config.js
+export const firebaseConfig = {
+  apiKey: "your-key",
+  authDomain: "your-domain",
+  databaseURL: "your-database-url",
+  projectId: "your-project-id",
+  storageBucket: "your-storage",
+  messagingSenderId: "your-sender-id"
+};
+```
+
+
 # start
 
-``npm start``
+``yarn start``
 
 # setup
 ### refs
@@ -14,7 +47,7 @@ firebase consoleからwebappに追加を押し、表示されるfirebaseのconfi
 
 ### reploy
 ```
-npm build
+yarn build
 firebase deploy
 ```
 
