@@ -13,7 +13,7 @@ cp .firebaserc.sample .firebaserc
 cp config/.firebaserc.sample .firebaserc
 ```
 
-```:.firebaserc
+``` coffeescript:.firebaserc
 {
   "projects": {
     "default": "your-projedt-id"
@@ -21,7 +21,7 @@ cp config/.firebaserc.sample .firebaserc
 }
 ```
 
-```:src/firebase/config.js
+``` JavaScript:src/firebase/config.js
 export const firebaseConfig = {
   apiKey: "your-key",
   authDomain: "your-domain",
