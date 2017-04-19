@@ -12,4 +12,10 @@
 ### procedure
 firebase consoleからwebappに追加を押し、表示されるfirebaseのconfig関連のkeyをfirebase/config.jsに作る
 
+### reploy
+```
+npm build
+firebase deploy
+```
+
 

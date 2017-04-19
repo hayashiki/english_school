@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
-import {firebaseDb} from './firebase/'
+import React, { Component } from "react";
+import { firebaseDb } from "./firebase/";
+import "./App.css";
+
 const ref = firebaseDb.ref('contact');
-import './App.css';
 
-
-class App extends Component {
-
-  constructor(){
+export default class App extends Component {
+  constructor() {
     super();
     this._hundleSubmit = this._hundleSubmit.bind(this);
   }
 
-// todo いい感じにformの値をとってくる
+  // todo いい感じにformの値をとってくる
   _hundleSubmit() {
     ref.push({
       subscribedToMailingList: true,
@@ -26,24 +25,78 @@ class App extends Component {
     return (
       <div id="container">
         <header>
-          <img className="logo" src="images/logo.png"></img>
+          <img className="logo" src="images/logo.png" alt="" />
           <div className="title">
             <div onClick={this._hundleSubmit}>Benesseこども英語教室</div>
             <div>松江教室 英会話のP.E.C</div>
           </div>
           <div className="information">TEL: 123-456-789受付10:00 ~ 17:00</div>
         </header>
-        <nav>
-          <a href="#characteristic"><div className="nav-characteristic">特色・こだわり</div></a>
-          <a href="#courses"><div className="nav-courses">コース</div></a>
-          <a href="#expense"><div className="nav-expense">受講費</div></a>
-          <a href="#becoming"><div className="nav-becoming">入会までの流れ</div></a>
-          <a href="#classroom"><div className="nav-classroom">教室案内</div></a>
-          <a href="#inquiry"><div className="nav-inquiry">お申込み・お問い合わせ</div></a>
+        <nav className="navbar navbar-default">
+          <div className="navbar-header">
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+            </button>
+          </div>
+          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div className="row">
+              <div className="col-md-2 nav-item">
+                <a href="#characteristic">
+                  <div className="nav-characteristic">
+                    <p>特色・こだわり</p>
+                    <small>characteristic</small>
+                  </div>
+                </a>
+              </div>
+              <div className="col-md-2 nav-item">
+                <a href="#courses">
+                  <div className="nav-courses">
+                    <p>コース</p>
+                    <small>courses</small>
+                  </div>
+                </a>
+              </div>
+              <div className="col-md-2 nav-item">
+                <a href="#expense">
+                  <div className="nav-expense">
+                    <p>受講費</p>
+                    <small>expense</small>
+                  </div>
+                </a>
+              </div>
+              <div className="col-md-2 nav-item">
+                <a href="#becoming">
+                  <div className="nav-becoming">
+                    <p>入会までの流れ</p>
+                    <small>becoming</small>
+                  </div>
+                </a>
+              </div>
+              <div className="col-md-2 nav-item">
+                <a href="#classroom">
+                  <div className="nav-classroom">
+                    <p>教室案内</p>
+                    <small>classroom</small>
+                  </div>
+                </a>
+              </div>
+              <div className="col-md-2 nav-item">
+                <a href="#inquiry">
+                  <div className="nav-inquiry">
+                    <p>お申込み・お問い合わせ</p>
+                    <small>inquiry</small>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </nav>
         <div id="show">
-          <img src="images/image-4.png" className="show__image" />
-          <img src="images/image-1.jpg" className="show__image" />
+          <img src="images/image-4.png" className="show__image" alt="" />
+          <img src="images/image-1.jpg" className="show__image" alt="" />
         </div>
         <div id="characteristic">
           <div className="characteristic__header">
@@ -63,7 +116,7 @@ class App extends Component {
               <p>英会話の主役は講師ではなく、子どもたち。「フレーズを覚えて・繰り返す」だけではなく、「理解した言い方を、自分の言いたいことで使ってみる」体験が重要です。その時期の子どもの興味・関心、動機づけを深く理解したレッスンがここにあります。</p>
             </div>
             <div className="col-md-6 characteristic__image">
-              <img src="images/image-5.png" className="characteristic__image--view"></img>
+              <img src="images/image-5.png" className="characteristic__image--view" alt="" />
             </div>
           </div>
         </div>
@@ -85,7 +138,7 @@ class App extends Component {
                       <b>しまじろうと一緒に英語耳を育てる</b>
                     </div>
                   </div>
-                  <img src="images/image-3.jpg" className="courses__card--image" />
+                  <img src="images/image-3.jpg" className="courses__card--image" alt="" />
                 </div>
                 <div className="courses__card--content">
                   聴覚機能が完成する小学校低学年ごろまでに、たくさんの英語を聞いたり話したりすることで英語独自の音やリズムが聞き取れる「英語耳」を育てることができます。
@@ -102,7 +155,7 @@ class App extends Component {
                       <b>しまじろうと一緒に英語耳を育てる</b>
                     </div>
                   </div>
-                  <img src="images/image-3.jpg" className="courses__card--image" />
+                  <img src="images/image-3.jpg" className="courses__card--image" alt="" />
                 </div>
                 <div className="courses__card--content">
                   聴覚機能が完成する小学校低学年ごろまでに、たくさんの英語を聞いたり話したりすることで英語独自の音やリズムが聞き取れる「英語耳」を育てることができます。
@@ -119,7 +172,7 @@ class App extends Component {
                       <b>しまじろうと一緒に英語耳を育てる</b>
                     </div>
                   </div>
-                  <img src="images/image-3.jpg" className="courses__card--image" />
+                  <img src="images/image-3.jpg" className="courses__card--image" alt="" />
                 </div>
                 <div className="courses__card--content">
                   聴覚機能が完成する小学校低学年ごろまでに、たくさんの英語を聞いたり話したりすることで英語独自の音やリズムが聞き取れる「英語耳」を育てることができます。
@@ -136,7 +189,7 @@ class App extends Component {
                       <b>しまじろうと一緒に英語耳を育てる</b>
                     </div>
                   </div>
-                  <img src="images/image-3.jpg" className="courses__card--image" />
+                  <img src="images/image-3.jpg" className="courses__card--image" alt="" />
                 </div>
                 <div className="courses__card--content">
                   聴覚機能が完成する小学校低学年ごろまでに、たくさんの英語を聞いたり話したりすることで英語独自の音やリズムが聞き取れる「英語耳」を育てることができます。
@@ -153,7 +206,7 @@ class App extends Component {
                       <b>しまじろうと一緒に英語耳を育てる</b>
                     </div>
                   </div>
-                  <img src="images/image-3.jpg" className="courses__card--image" />
+                  <img src="images/image-3.jpg" className="courses__card--image" alt="" />
                 </div>
                 <div className="courses__card--content">
                   聴覚機能が完成する小学校低学年ごろまでに、たくさんの英語を聞いたり話したりすることで英語独自の音やリズムが聞き取れる「英語耳」を育てることができます。
@@ -390,21 +443,25 @@ class App extends Component {
                 <p>TEL 123-456-789</p>
               </div>
               <div className="classroom__teacher--info"><b>講師紹介</b></div>
-              <div className="row classroom__teachers">
-                <div className="col-md-6 classroom__teacher">
-                  <div className="classroom__teacher--image">
-                    <img src="images/character.png" />
-                  </div>
-                  <div className="classroom__teacher--name">
-                    <b>Sam Smith</b>
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="classroom__teacher">
+                    <div className="classroom__teacher--image">
+                      <img src="images/character.png" alt="" />
+                    </div>
+                    <div className="classroom__teacher--name">
+                      <b>Sam Smith</b>
+                    </div>
                   </div>
                 </div>
-                <div className="col-md-6 classroom__teacher">
-                  <div className="classroom__teacher--image">
-                    <img src="images/character.png" />
-                  </div>
-                  <div className="classroom__teacher--name">
-                    <b>Masako Hayashida</b>
+                <div className="col-md-6">
+                  <div className="classroom__teacher">
+                    <div className="classroom__teacher--image">
+                      <img src="images/character.png" alt="" />
+                    </div>
+                    <div className="classroom__teacher--name">
+                      <b>Masako Hayashida</b>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -414,7 +471,7 @@ class App extends Component {
                 width="90%"
                 height="450"
                 frameBorder="0"
-                style={{border: "0"}}
+                style={{ border: "0" }}
                 allowFullScreen>
               </iframe>
             </div>
@@ -445,7 +502,7 @@ class App extends Component {
               </div>
             </div>
             <div className="col-md-6 inquiry__form--wrapper">
-              <form className="inquiry__form" onClick={this._hundleSubmit}>
+              <form className="inquiry__form" onSubmit={this._hundleSubmit}>
                 <input className="inquiry__form--input" type="text" placeholder="*お名前" required />
                 <input className="inquiry__form--input" type="email" placeholder="*E-mail" required />
                 <input className="inquiry__form--input" type="text" placeholder="TEL" />
@@ -465,5 +522,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
