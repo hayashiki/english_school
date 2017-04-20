@@ -16,6 +16,7 @@ html, body, {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
 }
 
 html {
@@ -37,18 +38,43 @@ html {
 header {
   display: flex;
   flex-flow: row nowrap;
-  height: 50px;
-
-  overflow: hidden;
+  height: 60px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1200px) {
+  header {
+    flex-flow: column nowrap;
+  }
 }
 
-.logo {
+.header__title {
+  padding: 0 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.header__classname {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.header__logo {
   width: 150px;
 }
 
 .information {
   margin-left: auto;
 }
+
+/*@media screen and (max-width: 1200px) {
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+}*/
 
 .navbar-default {
   border-radius: 0;
@@ -58,6 +84,7 @@ header {
   box-shadow: none;
   margin: 0;
   border-color: transparent;
+  border-bottom: 1px solid #e7e7e7;
 }
 
 .nav {
@@ -65,7 +92,7 @@ header {
 }
 
 .nav-item {
-  padding: 10px;
+  padding: 5px 0;
 }
 
 .nav-characteristic,
@@ -77,6 +104,15 @@ header {
   color: #212121;
   height: 50px;
   text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav-active {
+  border-bottom: 2px solid deepskyblue;
 }
 
 #characteristic,
@@ -146,7 +182,7 @@ header {
 }
 
 .characteristic__content {
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 .characteristic__comments {
@@ -170,8 +206,7 @@ header {
 
 .courses__content {
   width: 100%;
-  overflow: hidden;
-  padding: 20px 10px 0;
+  padding: 20px 10px;
 }
 
 .courses__card {
@@ -236,15 +271,14 @@ header {
 
 .expense__content {
   width: 100%;
-  overflow: hidden;
-  padding: 10px 0;
+  padding: 20px 10px;
 }
 
 .expense__card {
   border: 1px solid #ddd;
   border-top: 3px solid #646464;
   box-shadow:0px 3px 6px 0px #ccc;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .expense__card--table {
@@ -322,6 +356,18 @@ header {
   padding: 20px 0;
 }
 
+.classroom__info {
+  padding: 20px 0;
+}
+
+.classroom__address {
+  padding: 15px;
+}
+
+.classroom__teacher--container {
+  padding: 15px;
+}
+
 .classroom__teacher--info {
   display: flex;
   justify-content: center;
@@ -335,6 +381,7 @@ header {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  padding: 10px 0;
 }
 
 .classroom__teacher--image {
@@ -360,12 +407,14 @@ header {
   display: flex;
   justify-content: center;
   pointer-events: none;
+  padding: 20px 0;
 }
 
 .inquiry__content {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  margin: 50px 0;
 }
 
 .inquiry__info {
@@ -418,6 +467,7 @@ header {
 .inquiry__form {
   display: flex;
   flex-flow: column nowrap;
+  padding: 20px 0;
 }
 
 .inquiry__form--input {
@@ -429,7 +479,7 @@ header {
 }
 
 .inquiry__form--textarea {
-  height: 150px;
+  height: 300px;
   resize: none;
 }
 
@@ -448,6 +498,7 @@ header {
   margin: 8px auto;
   color: white;
   width: 200px;
+  background-color: deepskyblue;
 }
 .inquiry__form--button:hover {
   box-shadow: 0 0 0 2px white;
