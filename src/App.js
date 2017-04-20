@@ -39,12 +39,15 @@ export default class App extends Component {
     return (
       <div id="container">
         <header>
-          <img className="logo" src="images/logo.png" alt="" />
-          <div className="title">
-            <div onClick={this._hundleSubmit}>Benesseこども英語教室</div>
-            <div>松江教室 英会話のP.E.C</div>
+          <img className="header__logo" src="images/logo.png" alt="" />
+          <div className="header__title">
+            <div onClick={this._hundleSubmit}>ベネッセこども英語教室</div>
+            <div className="header__classname">松江教室 英会話のP.E.C</div>
           </div>
-          <div className="information">TEL: 123-456-789受付10:00 ~ 17:00</div>
+          <div className="information">
+            <p>TEL: 123-456-789</p>
+            <p>受付10:00 ~ 17:00</p>
+          </div>
         </header>
         <nav className="navbar navbar-default">
           <div className="navbar-header">
@@ -59,8 +62,8 @@ export default class App extends Component {
             <div className="row">
               <div className="col-md-2 nav-item">
                 <a href="#characteristic">
-                  <div className="nav-characteristic">
-                    <p>特色・こだわり</p>
+                  <div className="nav-characteristic nav-active">
+                    <b>特色・こだわり</b>
                     <small>characteristic</small>
                   </div>
                 </a>
@@ -68,7 +71,7 @@ export default class App extends Component {
               <div className="col-md-2 nav-item">
                 <a href="#courses">
                   <div className="nav-courses">
-                    <p>コース</p>
+                    <b>コース</b>
                     <small>courses</small>
                   </div>
                 </a>
@@ -76,7 +79,7 @@ export default class App extends Component {
               <div className="col-md-2 nav-item">
                 <a href="#expense">
                   <div className="nav-expense">
-                    <p>受講費</p>
+                    <b>受講費</b>
                     <small>expense</small>
                   </div>
                 </a>
@@ -84,7 +87,7 @@ export default class App extends Component {
               <div className="col-md-2 nav-item">
                 <a href="#becoming">
                   <div className="nav-becoming">
-                    <p>入会までの流れ</p>
+                    <b>入会までの流れ</b>
                     <small>becoming</small>
                   </div>
                 </a>
@@ -92,7 +95,7 @@ export default class App extends Component {
               <div className="col-md-2 nav-item">
                 <a href="#classroom">
                   <div className="nav-classroom">
-                    <p>教室案内</p>
+                    <b>教室案内</b>
                     <small>classroom</small>
                   </div>
                 </a>
@@ -100,7 +103,7 @@ export default class App extends Component {
               <div className="col-md-2 nav-item">
                 <a href="#inquiry">
                   <div className="nav-inquiry">
-                    <p>お申込み・お問い合わせ</p>
+                    <b>お申込み・お問い合わせ</b>
                     <small>inquiry</small>
                   </div>
                 </a>
@@ -458,20 +461,20 @@ export default class App extends Component {
               </div>
               <div className="classroom__teacher--info"><b>講師紹介</b></div>
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-6 classroom__teacher--container">
                   <div className="classroom__teacher">
                     <div className="classroom__teacher--image">
-                      <img src="images/character.png" alt="" />
+                      <img src="images/teacher-1.jpg" alt="" />
                     </div>
                     <div className="classroom__teacher--name">
                       <b>Sam Smith</b>
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 classroom__teacher--container">
                   <div className="classroom__teacher">
                     <div className="classroom__teacher--image">
-                      <img src="images/character.png" alt="" />
+                      <img src="images/teacher-2.jpg" alt="" />
                     </div>
                     <div className="classroom__teacher--name">
                       <b>Masako Hayashida</b>
@@ -483,7 +486,7 @@ export default class App extends Component {
             <div className="col-md-6 classroom__map">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1624.6210963215506!2d133.06503445690916!3d35.47355108024328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35570457cf3b947f%3A0x56014f5ff2b158b3!2z44CSNjkwLTA4MjYg5bO25qC555yM5p2-5rGf5biC5a2m5ZyS5Y2X77yS5LiB55uu77yV4oiS77yR77yT!5e0!3m2!1sja!2sjp!4v1491888918135"
                 width="90%"
-                height="450"
+                height="500"
                 frameBorder="0"
                 style={{ border: "0" }}
                 allowFullScreen>
@@ -544,7 +547,7 @@ export default class App extends Component {
                   value={ this.state.content }
                   onChange={ this._handleChange("content") }
                   required />
-                <button className="inquiry__form--button" onClick={this._hundleSubmit} />
+                <button className="inquiry__form--button" onClick={this._hundleSubmit}>送信</button>
               </form>
             </div>
           </div>
