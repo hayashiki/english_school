@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import _ from "lodash";
 import { firebaseDb } from "./firebase/";
 import "./App.css";
 
@@ -7,18 +8,31 @@ const ref = firebaseDb.ref('contact');
 export default class App extends Component {
   constructor() {
     super();
-    this._hundleSubmit = this._hundleSubmit.bind(this);
+    this.state = {
+      username: "",
+      email: "",
+      tel: "",
+      content: ""
+    }
+
+    _.forEach([
+        '_hundleSubmit',
+        '_handleChange'
+    ], (method) => {
+        this[method] = this[method].bind(this);
+    });
   }
 
-  // todo いい感じにformの値をとってくる
-  _hundleSubmit() {
-    ref.push({
-      subscribedToMailingList: true,
-      email: "peperoncino.pop@gmail.com",
-      text1: "aaaaa",
-      text2: false,
-      text3: true
-    })
+  _hundleSubmit(e) {
+    e.preventDefault();
+    const user = Object.assign({subscribedToMailingList: true}, this.state);
+    ref.push(user)
+  }
+
+  _handleChange(field) {
+    return (e) => {
+     this.setState({ [field]: e.currentTarget.value });
+   };
   }
 
   render() {
@@ -502,12 +516,35 @@ export default class App extends Component {
               </div>
             </div>
             <div className="col-md-6 inquiry__form--wrapper">
-              <form className="inquiry__form" onSubmit={this._hundleSubmit}>
-                <input className="inquiry__form--input" type="text" placeholder="*お名前" required />
-                <input className="inquiry__form--input" type="email" placeholder="*E-mail" required />
-                <input className="inquiry__form--input" type="text" placeholder="TEL" />
-                <textarea className="inquiry__form--input inquiry__form--textarea" type="textarea" placeholder="*お問い合わせ内容&#13;&#10;英語教室に関する疑問・質問をご入力下さい。&#13;&#10;翻訳業務に関するお問い合わせもこちらからどうぞ。" required />
-                <input className="inquiry__form--button" type="submit" />
+              <form className="inquiry__form">
+                <input
+                  className="inquiry__form--input"
+                  type="text"
+                  placeholder="*お名前"
+                  value={ this.state.username }
+                  onChange={ this._handleChange("username") }
+                  required />
+                <input
+                  className="inquiry__form--input"
+                  type="email"
+                  placeholder="*E-mail"
+                  value={ this.state.email }
+                  onChange={ this._handleChange("email") }
+                  required />
+                <input
+                  className="inquiry__form--input"
+                  type="text"
+                  value={ this.state.tel }
+                  onChange={ this._handleChange("tel") }
+                  placeholder="TEL" />
+                <textarea
+                  className="inquiry__form--input inquiry__form--textarea"
+                  type="textarea"
+                  placeholder="*お問い合わせ内容&#13;&#10;英語教室に関する疑問・質問をご入力下さい。&#13;&#10;翻訳業務に関するお問い合わせもこちらからどうぞ。"
+                  value={ this.state.content }
+                  onChange={ this._handleChange("content") }
+                  required />
+                <button className="inquiry__form--button" onClick={this._hundleSubmit} />
               </form>
             </div>
           </div>
