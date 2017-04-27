@@ -28,7 +28,7 @@ html {
   margin: 0 auto;
   width: 1200px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 640px) {
   #container {
     margin: 0;
     width: 100vw;
@@ -41,9 +41,14 @@ header {
   height: 60px;
   margin-bottom: 10px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 640px) {
   header {
     flex-flow: column nowrap;
+    height: auto;
+    align-items: center;
+  }
+  .header__info {
+    margin-left: 0 !important;
   }
 }
 
@@ -63,23 +68,15 @@ header {
   width: 150px;
 }
 
-.information {
+.header__info {
   margin-left: auto;
+  padding: 10px;
 }
-
-/*@media screen and (max-width: 1200px) {
-  .navbar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-  }
-}*/
 
 .navbar-default {
   border-radius: 0;
   background-image: none;
-  background-color: transparent;
+  background-color: white;
   background-repeat: no-repeat;
   box-shadow: none;
   margin: 0;
@@ -143,9 +140,13 @@ header {
 }
 
 .show__image {
-  width: 50%;
-  height: 300px;
+  height: 400px;
   object-fit: contain;
+}
+@media screen and (max-width: 640px) {
+  #show {
+    display: none;
+  }
 }
 
 .expense__header--wrapper {
@@ -260,8 +261,8 @@ header {
 }
 
 .courses--advanced {
-  border-top: 3px solid greenyellow;
-  color: greenyellow;
+  border-top: 3px solid #8BC34A;
+  color: #8BC34A;
 }
 
 .courses--teens {
@@ -279,6 +280,7 @@ header {
   border-top: 3px solid #646464;
   box-shadow:0px 3px 6px 0px #ccc;
   margin: 20px 0;
+  height: 250px;
 }
 
 .expense__card--table {
@@ -318,10 +320,10 @@ header {
 }
 
 .expense__card--advanced {
-  border-top: 3px solid greenyellow;
+  border-top: 3px solid #8BC34A;
 }
 .expense__title--advanced {
-  color: greenyellow;
+  color: #8BC34A;
 }
 
 .expense__card--teens {
@@ -364,43 +366,29 @@ header {
   padding: 15px;
 }
 
-.classroom__teacher--container {
-  padding: 15px;
-}
-
 .classroom__teacher--info {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.classroom__teacher {
-  border: 1px solid #bbb;
-  height: 380px;
-  display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  padding: 10px 0;
-}
-
-.classroom__teacher--image {
-  border-top: 3px solid deepskyblue;
-  width: 140px;
-  padding: 20px 0;
-}
-
-.classroom__teacher--image img {
-  border-radius: 140px;
-  border: 1px solid #ccc;
-  width: 140px;
-  height: 140px;
-}
-
-.classroom__teacher--name {
-  font-size: 1.4em;
-  display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  color: #40C4FF;
+  font-size: 1.1em;
+}
+
+.classroom__teacher--container {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.classroom__teacher--container img {
+  border-radius: 1920px;
+  border: 1px solid #ccc;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
 }
 
 .classroom__map {
@@ -461,7 +449,7 @@ header {
 }
 
 .inquiry__form--wrapper {
-  background-color: deepskyblue;
+  background-color: #4FC3F7;
 }
 
 .inquiry__form {
@@ -498,7 +486,7 @@ header {
   margin: 8px auto;
   color: white;
   width: 200px;
-  background-color: deepskyblue;
+  background-color: #4FC3F7;
 }
 .inquiry__form--button:hover {
   box-shadow: 0 0 0 2px white;

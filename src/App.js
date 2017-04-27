@@ -44,9 +44,9 @@ export default class App extends Component {
             <div onClick={this._hundleSubmit}>ベネッセこども英語教室</div>
             <div className="header__classname">松江教室 英会話のP.E.C</div>
           </div>
-          <div className="information">
-            <p>TEL: 123-456-789</p>
-            <p>受付10:00 ~ 17:00</p>
+          <div className="header__info">
+            <p><span className="glyphicon glyphicon-earphone" aria-hidden="true"></span>TEL: 0852-21-1802</p>
+            <p>受付: 10:00 ~ 17:00</p>
           </div>
         </header>
         <nav className="navbar navbar-default">
@@ -111,9 +111,9 @@ export default class App extends Component {
             </div>
           </div>
         </nav>
-        <div id="show">
-          <img src="images/image-4.png" className="show__image" alt="" />
-          <img src="images/image-1.jpg" className="show__image" alt="" />
+        <div id="show" className="row">
+          <img src="images/image-4.png" className="col-md-6 show__image" alt="" />
+          <img src="images/image-1.jpg" className="col-md-6 show__image" alt="" />
         </div>
         <div id="characteristic">
           <div className="characteristic__header">
@@ -155,7 +155,7 @@ export default class App extends Component {
                       <b>しまじろうと一緒に英語耳を育てる</b>
                     </div>
                   </div>
-                  <img src="images/image-3.jpg" className="courses__card--image" alt="" />
+                  <img src="images/icon-1.jpg" className="courses__card--image" alt="" />
                 </div>
                 <div className="courses__card--content">
                   聴覚機能が完成する小学校低学年ごろまでに、たくさんの英語を聞いたり話したりすることで英語独自の音やリズムが聞き取れる「英語耳」を育てることができます。
@@ -169,13 +169,13 @@ export default class App extends Component {
                       <b>小学１・２年生</b>
                     </div>
                     <div className="courses__card--text">
-                      <b>しまじろうと一緒に英語耳を育てる</b>
+                      <b>英語で聞く・話すの土台を作る</b>
                     </div>
                   </div>
-                  <img src="images/image-3.jpg" className="courses__card--image" alt="" />
+                  <img src="images/icon-2.jpg" className="courses__card--image" alt="" />
                 </div>
                 <div className="courses__card--content">
-                  聴覚機能が完成する小学校低学年ごろまでに、たくさんの英語を聞いたり話したりすることで英語独自の音やリズムが聞き取れる「英語耳」を育てることができます。
+                  レッスンには、身近な学校を舞台にしたストーリーやゲームで、子どもたちの「言いたい」「聞きたい」「やりたい」気持ちを引き出すしかけがもりだくさんです。
                 </div>
               </div>
               <div className="col-md-4 courses__card">
@@ -186,13 +186,13 @@ export default class App extends Component {
                       <b>小学３・４年生</b>
                     </div>
                     <div className="courses__card--text">
-                      <b>しまじろうと一緒に英語耳を育てる</b>
+                      <b>英語で聞く・読む・話す・書く力を養う</b>
                     </div>
                   </div>
-                  <img src="images/image-3.jpg" className="courses__card--image" alt="" />
+                  <img src="images/icon-3.png" className="courses__card--image" alt="" />
                 </div>
                 <div className="courses__card--content">
-                  聴覚機能が完成する小学校低学年ごろまでに、たくさんの英語を聞いたり話したりすることで英語独自の音やリズムが聞き取れる「英語耳」を育てることができます。
+                  型にはまった会話練習ではなく、「知りたいことを聞き」「伝えたいことを話す」形式のペアワークや意見の発表で英語の生きたコミュニケーションを体感できます。
                 </div>
               </div>
               <div className="col-md-4 courses__card">
@@ -203,13 +203,13 @@ export default class App extends Component {
                       <b>小学５・６年生</b>
                     </div>
                     <div className="courses__card--text">
-                      <b>しまじろうと一緒に英語耳を育てる</b>
+                      <b>自分の言いたいことを英語で表現できる</b>
                     </div>
                   </div>
-                  <img src="images/image-3.jpg" className="courses__card--image" alt="" />
+                  <img src="images/icon-4.png" className="courses__card--image" alt="" />
                 </div>
                 <div className="courses__card--content">
-                  聴覚機能が完成する小学校低学年ごろまでに、たくさんの英語を聞いたり話したりすることで英語独自の音やリズムが聞き取れる「英語耳」を育てることができます。
+                  キーワードは「対話重視」。これからの中学英語で求められる力を、小学校のうちから鍛えます。
                 </div>
               </div>
               <div className="col-md-4 courses__card">
@@ -220,13 +220,13 @@ export default class App extends Component {
                       <b>中学１・２年生</b>
                     </div>
                     <div className="courses__card--text">
-                      <b>しまじろうと一緒に英語耳を育てる</b>
+                      <b>ナチュラルスピードの英語に対応し、文法知識も定着する</b>
                     </div>
                   </div>
-                  <img src="images/image-3.jpg" className="courses__card--image" alt="" />
+                  <img src="images/icon-5.jpg" className="courses__card--image" alt="" />
                 </div>
                 <div className="courses__card--content">
-                  聴覚機能が完成する小学校低学年ごろまでに、たくさんの英語を聞いたり話したりすることで英語独自の音やリズムが聞き取れる「英語耳」を育てることができます。
+                  ナチュラルスピードの英語を聞き取り、とっさに返事ができ、言いたいことを表現できる「英語の瞬発力」を鍛えます。
                 </div>
               </div>
             </div>
@@ -255,9 +255,9 @@ export default class App extends Component {
                     <table className="table no-margin">
                       <tr>
                         <th><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span>教材費</th>
-                        <td>教材費</td>
-                        <td>教材費</td>
-                        <td>教材費</td>
+                        <td>４月〜８月入会</td>
+                        <td>９月〜１２月入会</td>
+                        <td>１月〜３月入会</td>
                       </tr>
                       <tr>
                         <td><b>ベーシック</b></td>
@@ -281,28 +281,28 @@ export default class App extends Component {
                     <b>Elementaryコース 小学１・２年生</b>
                   </div>
                   <div className="expense__card--content">
-                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>１回５０分・全４２回 </b></li>
-                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>受講費</b>（月）5,500円（＋税）</li>
+                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>１回６０分・全４２回 </b></li>
+                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>受講費</b>（月）6,000円（＋税）</li>
                   </div>
                   <div className="expense__card--table">
                     <table className="table no-margin">
                       <tr>
                         <th><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span>教材費</th>
-                        <td>教材費</td>
-                        <td>教材費</td>
-                        <td>教材費</td>
+                        <td>４月〜８月入会</td>
+                        <td>９月〜１２月入会</td>
+                        <td>１月〜３月入会</td>
                       </tr>
                       <tr>
                         <td><b>ベーシック</b></td>
-                        <td>15,915円（＋税）</td>
-                        <td>11,343円（＋税）</td>
-                        <td>8,677円（＋税）</td>
+                        <td>18,080円（＋税）</td>
+                        <td>12,300円（＋税）</td>
+                        <td>6,700円（＋税）</td>
                       </tr>
                       <tr>
-                        <td><b>スター/レインボー</b></td>
-                        <td>15,915円（＋税）</td>
-                        <td>11,343円（＋税）</td>
-                        <td>8,677円（＋税）</td>
+                        <td><b>プログレッシブ</b></td>
+                        <td>18,080円（＋税）</td>
+                        <td>12,100円（＋税）</td>
+                        <td>6,300円（＋税）</td>
                       </tr>
                     </table>
                   </div>
@@ -314,28 +314,28 @@ export default class App extends Component {
                     <b>Intermediateコース 小学３・４年生</b>
                   </div>
                   <div className="expense__card--content">
-                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>１回５０分・全４２回 </b></li>
-                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>受講費</b>（月）5,500円（＋税）</li>
+                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>１回６０分・全４２回 </b></li>
+                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>受講費</b>（月）6,000円（＋税）</li>
                   </div>
                   <div className="expense__card--table">
                     <table className="table no-margin">
                       <tr>
                         <th><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span>教材費</th>
-                        <td>教材費</td>
-                        <td>教材費</td>
-                        <td>教材費</td>
+                        <td>４月〜８月入会</td>
+                        <td>９月〜１２月入会</td>
+                        <td>１月〜３月入会</td>
                       </tr>
                       <tr>
                         <td><b>ベーシック</b></td>
-                        <td>15,915円（＋税）</td>
-                        <td>11,343円（＋税）</td>
-                        <td>8,677円（＋税）</td>
+                        <td>18,080円（＋税）</td>
+                        <td>12,300円（＋税）</td>
+                        <td>6,700円（＋税）</td>
                       </tr>
                       <tr>
-                        <td><b>スター/レインボー</b></td>
-                        <td>15,915円（＋税）</td>
-                        <td>11,343円（＋税）</td>
-                        <td>8,677円（＋税）</td>
+                        <td><b>プログレッシブ</b></td>
+                        <td>18,080円（＋税）</td>
+                        <td>12,180円（＋税）</td>
+                        <td>6,280円（＋税）</td>
                       </tr>
                     </table>
                   </div>
@@ -347,28 +347,22 @@ export default class App extends Component {
                     <b>Advancedコース 小学５・６年生</b>
                   </div>
                   <div className="expense__card--content">
-                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>１回５０分・全４２回 </b></li>
-                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>受講費</b>（月）5,500円（＋税）</li>
+                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>１回６０分・全４２回 </b></li>
+                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>受講費</b>（月）6,000円（＋税）</li>
                   </div>
                   <div className="expense__card--table">
                     <table className="table no-margin">
                       <tr>
                         <th><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span>教材費</th>
-                        <td>教材費</td>
-                        <td>教材費</td>
-                        <td>教材費</td>
+                        <td>４月〜８月入会</td>
+                        <td>９月〜１２月入会</td>
+                        <td>１月〜３月入会</td>
                       </tr>
                       <tr>
                         <td><b>ベーシック</b></td>
-                        <td>15,915円（＋税）</td>
-                        <td>11,343円（＋税）</td>
-                        <td>8,677円（＋税）</td>
-                      </tr>
-                      <tr>
-                        <td><b>スター/レインボー</b></td>
-                        <td>15,915円（＋税）</td>
-                        <td>11,343円（＋税）</td>
-                        <td>8,677円（＋税）</td>
+                        <td>18,080円（＋税）</td>
+                        <td>9,940円（＋税）</td>
+                        <td>6,940円（＋税）</td>
                       </tr>
                     </table>
                   </div>
@@ -380,28 +374,25 @@ export default class App extends Component {
                     <b>Teensコース 中学１・２年生</b>
                   </div>
                   <div className="expense__card--content">
-                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>１回５０分・全４２回 </b></li>
-                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>受講費</b>（月）5,500円（＋税）</li>
+                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>１回７０分・全４２回 </b></li>
+                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>受講費</b>（月）7,000円（＋税）</li>
                   </div>
                   <div className="expense__card--table">
                     <table className="table no-margin">
                       <tr>
                         <th><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span>教材費</th>
-                        <td>教材費</td>
-                        <td>教材費</td>
-                        <td>教材費</td>
+                        <td>４月〜８月入会</td>
+                        <td>９月〜１２月入会</td>
+                        <td>１月〜３月入会</td>
                       </tr>
                       <tr>
                         <td><b>ベーシック</b></td>
-                        <td>15,915円（＋税）</td>
+                        <td>8,296円〜12,968円（＋税）</td>
                         <td>11,343円（＋税）</td>
-                        <td>8,677円（＋税）</td>
                       </tr>
                       <tr>
-                        <td><b>スター/レインボー</b></td>
-                        <td>15,915円（＋税）</td>
-                        <td>11,343円（＋税）</td>
-                        <td>8,677円（＋税）</td>
+                        <td><b>アドバンス</b></td>
+                        <td>8,000円（＋税）</td>
                       </tr>
                     </table>
                   </div>
@@ -459,27 +450,16 @@ export default class App extends Component {
                 <p>〒 609-0826 島根県松江市学園2丁目5-13</p>
                 <p>TEL 123-456-789</p>
               </div>
-              <div className="classroom__teacher--info"><b>講師紹介</b></div>
+              <div className="classroom__teacher--info">
+                <p><b>We look forward to welcoming you!</b></p>
+                <p><b>私達がお待ちしています!</b></p>
+              </div>
               <div className="row">
                 <div className="col-md-6 classroom__teacher--container">
-                  <div className="classroom__teacher">
-                    <div className="classroom__teacher--image">
-                      <img src="images/teacher-1.jpg" alt="" />
-                    </div>
-                    <div className="classroom__teacher--name">
-                      <b>Sam Smith</b>
-                    </div>
-                  </div>
+                  <img src="images/teacher-1.jpg" alt="" />
                 </div>
                 <div className="col-md-6 classroom__teacher--container">
-                  <div className="classroom__teacher">
-                    <div className="classroom__teacher--image">
-                      <img src="images/teacher-2.jpg" alt="" />
-                    </div>
-                    <div className="classroom__teacher--name">
-                      <b>Masako Hayashida</b>
-                    </div>
-                  </div>
+                  <img src="images/teacher-2.jpg" alt="" />
                 </div>
               </div>
             </div>
@@ -554,7 +534,7 @@ export default class App extends Component {
         </div>
         <footer>
           <p>Benesseこども英語教室 松江教室</p>
-          <p>〒 609-0826 島根県松江市学園2丁目5-13 : TEL 123-456-789</p>
+          <p>〒 609-0826 島根県松江市学園2丁目5-13 : TEL 0852-21-1802</p>
           <p>株式会社P.E.Cは株式会社ベネッセコーポレーションと提携してBenesseこども教室を運営しております。</p>
           <p>Copyright (c) P.E.C  All right reserved.</p>
         </footer>
