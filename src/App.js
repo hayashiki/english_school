@@ -12,7 +12,7 @@ export default class App extends Component {
       username: "",
       email: "",
       tel: "",
-      content: ""
+      content: "",
     }
 
     _.forEach([
@@ -25,8 +25,26 @@ export default class App extends Component {
 
   _hundleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({subscribedToMailingList: true}, this.state);
-    ref.push(user)
+    const request_time = Date.now();
+    const user = Object.assign({subscribedToMailingList: true, request_time: request_time}, this.state);
+
+    if(window.confirm(`以下の内容で送信します。\nお名前: ${this.state.username}\nemail: ${this.state.email}\n電話番号： ${this.state.tel}\n問い合わせ内容： ${this.state.content}`)){
+
+      ref.push(user)
+      window.confirm('お問い合わせありがとうござました。\n')
+      this.setState({
+        username: "",
+        email: "",
+        tel: "",
+        content: "",
+      })
+
+  	}
+  	else{
+
+  		window.alert('キャンセルされました');
+
+  	}
   }
 
   _handleChange(field) {
@@ -484,7 +502,7 @@ export default class App extends Component {
               <div className="inquiry__content">
                 <div className="inquiry__info">
                   <p>お電話でのお問い合わせはこちら</p>
-                  <p><span className="glyphicon glyphicon-earphone" aria-hidden="true"></span>1234-567-890</p>
+                  <p><span className="glyphicon glyphicon-earphone" aria-hidden="true"></span>0852-21-1802</p>
                   <p>受付：10:00 〜 17:00（土日・祝日・年末年始を除く）</p>
                 </div>
                 <div>
