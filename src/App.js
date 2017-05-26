@@ -64,7 +64,7 @@ export default class App extends Component {
           </div>
           <div className="header__info">
             <p><span className="glyphicon glyphicon-earphone" aria-hidden="true"></span>TEL: 0852-21-1802</p>
-            <p>受付: 10:00 ~ 17:00</p>
+            <p>受付: 10:00 ~ 19:00</p>
           </div>
         </header>
         <nav className="navbar navbar-default">
@@ -82,7 +82,6 @@ export default class App extends Component {
                 <a href="#characteristic">
                   <div className="nav-characteristic nav-active">
                     <b>特色・こだわり</b>
-                    <small>characteristic</small>
                   </div>
                 </a>
               </div>
@@ -90,7 +89,6 @@ export default class App extends Component {
                 <a href="#courses">
                   <div className="nav-courses">
                     <b>コース</b>
-                    <small>courses</small>
                   </div>
                 </a>
               </div>
@@ -98,7 +96,6 @@ export default class App extends Component {
                 <a href="#expense">
                   <div className="nav-expense">
                     <b>受講費</b>
-                    <small>expense</small>
                   </div>
                 </a>
               </div>
@@ -106,7 +103,6 @@ export default class App extends Component {
                 <a href="#becoming">
                   <div className="nav-becoming">
                     <b>入会までの流れ</b>
-                    <small>becoming</small>
                   </div>
                 </a>
               </div>
@@ -114,7 +110,6 @@ export default class App extends Component {
                 <a href="#classroom">
                   <div className="nav-classroom">
                     <b>教室案内</b>
-                    <small>classroom</small>
                   </div>
                 </a>
               </div>
@@ -122,7 +117,6 @@ export default class App extends Component {
                 <a href="#inquiry">
                   <div className="nav-inquiry">
                     <b>お申込み・お問い合わせ</b>
-                    <small>inquiry</small>
                   </div>
                 </a>
               </div>
@@ -131,7 +125,13 @@ export default class App extends Component {
         </nav>
         <div id="show" className="row">
           <img src="images/image-4.png" className="col-md-6 show__image" alt="" />
-          <img src="images/image-1.jpg" className="col-md-6 show__image" alt="" />
+          <img src="images/image-6.jpg" className="col-md-6 show__image" alt="" />
+          <div className="show__message">
+            育てたいのは<br />
+            英語が伝わる<br />
+            もっと話したい！<br />
+            という意欲
+          </div>
         </div>
         <div id="characteristic">
           <div className="characteristic__header">
@@ -436,7 +436,7 @@ export default class App extends Component {
               <div className="becoming__step">
                 <b className="becoming__step--title">STEP.2  無料体験レッスンに参加</b>
                 <div className="becoming__step--text">
-                  <p>体験レッスンで****を実感して下さい。</p>
+                  <p>体験レッスンで「英語って楽しい！」を実感して下さい。</p>
                   <p>ご参加頂いた際に、受講システムのご説明・入会手続きのご案内をいたします。</p>
                 </div>
               </div>
@@ -465,8 +465,8 @@ export default class App extends Component {
               <div className="classroom__address">
                 <p>松江教室</p>
                 <p>住所</p>
-                <p>〒 609-0826 島根県松江市学園2丁目5-13</p>
-                <p>TEL 123-456-789</p>
+                <p>〒 609-0826 島根県松江市学園2丁目5-13 ハーベストビル3F</p>
+                <p>TEL 0852-21-1802</p>
               </div>
               <div className="classroom__teacher--info">
                 <p><b>We look forward to welcoming you!</b></p>
@@ -503,7 +503,7 @@ export default class App extends Component {
                 <div className="inquiry__info">
                   <p>お電話でのお問い合わせはこちら</p>
                   <p><span className="glyphicon glyphicon-earphone" aria-hidden="true"></span>0852-21-1802</p>
-                  <p>受付：10:00 〜 17:00（土日・祝日・年末年始を除く）</p>
+                  <p>受付：10:00 〜 19:00（土日・祝日・年末年始を除く）</p>
                 </div>
                 <div>
                   <div className="inquiry__lesson">
@@ -552,7 +552,7 @@ export default class App extends Component {
         </div>
         <footer>
           <p>Benesseこども英語教室 松江教室</p>
-          <p>〒 609-0826 島根県松江市学園2丁目5-13 : TEL 0852-21-1802</p>
+          <p>〒 609-0826 島根県松江市学園2丁目5-13 ハーベストビル3F : TEL 0852-21-1802</p>
           <p>株式会社P.E.Cは株式会社ベネッセコーポレーションと提携してBenesseこども教室を運営しております。</p>
           <p>Copyright (c) P.E.C  All right reserved.</p>
         </footer>

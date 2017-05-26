@@ -141,12 +141,25 @@ header {
 
 .show__image {
   height: 400px;
-  object-fit: contain;
+  object-fit: cover;
+  padding: 0;
 }
 @media screen and (max-width: 640px) {
   #show {
     display: none;
   }
+}
+
+.show__message {
+  position: relative;
+  font-size: 2em;
+  min-width: 500px;
+  top: 14px;
+  left: -54%;
+  color: deepskyblue;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px #ccc;
+  z-index: 10;
 }
 
 .expense__header--wrapper {
