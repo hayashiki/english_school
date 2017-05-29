@@ -465,7 +465,7 @@ export default class App extends Component {
               <div className="classroom__address">
                 <p>松江教室</p>
                 <p>住所</p>
-                <p>〒 609-0826 島根県松江市学園2丁目5-13 ハーベストビル3F</p>
+                <p>〒 609-0826 島根県松江市学園南2丁目5-13 ハーベストビル3F</p>
                 <p>TEL 0852-21-1802</p>
               </div>
               <div className="classroom__teacher--info">
@@ -552,7 +552,7 @@ export default class App extends Component {
         </div>
         <footer>
           <p>Benesseこども英語教室 松江教室</p>
-          <p>〒 609-0826 島根県松江市学園2丁目5-13 ハーベストビル3F : TEL 0852-21-1802</p>
+          <p>〒 609-0826 島根県松江市学園南2丁目5-13 ハーベストビル3F : TEL 0852-21-1802</p>
           <p>株式会社P.E.Cは株式会社ベネッセコーポレーションと提携してBenesseこども教室を運営しております。</p>
           <p>Copyright (c) P.E.C  All right reserved.</p>
         </footer>
