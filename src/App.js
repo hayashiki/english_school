@@ -230,23 +230,6 @@ export default class App extends Component {
                   キーワードは「対話重視」。これからの中学英語で求められる力を、小学校のうちから鍛えます。
                 </div>
               </div>
-              <div className="col-md-4 courses__card">
-                <div className="courses__card--header">
-                  <div className="courses__card--title">
-                    <div className="courses__card--type courses--teens">
-                      <b>Teensコース</b>
-                      <b>中学１・２年生</b>
-                    </div>
-                    <div className="courses__card--text">
-                      <b>ナチュラルスピードの英語に対応し、文法知識も定着する</b>
-                    </div>
-                  </div>
-                  <img src="images/icon-5.jpg" className="courses__card--image" alt="" />
-                </div>
-                <div className="courses__card--content">
-                  ナチュラルスピードの英語を聞き取り、とっさに返事ができ、言いたいことを表現できる「英語の瞬発力」を鍛えます。
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -386,36 +369,6 @@ export default class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4">
-                <div className="expense__card expense__card--teens">
-                  <div className="expense__card--title expense__title--teens">
-                    <b>Teensコース 中学１・２年生</b>
-                  </div>
-                  <div className="expense__card--content">
-                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>１回７０分・全４２回 </b></li>
-                    <li className="expense__card--list"><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span><b>受講費</b>（月）7,000円（＋税）</li>
-                  </div>
-                  <div className="expense__card--table">
-                    <table className="table no-margin">
-                      <tr>
-                        <th><span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span>教材費</th>
-                        <td>４月〜８月入会</td>
-                        <td>９月〜１２月入会</td>
-                        <td>１月〜３月入会</td>
-                      </tr>
-                      <tr>
-                        <td><b>ベーシック</b></td>
-                        <td>8,296円〜12,968円（＋税）</td>
-                        <td>11,343円（＋税）</td>
-                      </tr>
-                      <tr>
-                        <td><b>アドバンス</b></td>
-                        <td>8,000円（＋税）</td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -511,7 +464,7 @@ export default class App extends Component {
                     <div className="inquiry__apply"><b>レッスン申し込み</b></div>
                   </div>
                   <div className="inquiry__document">
-                    <b>Benesseこども教室の松江教室を運営する株式会社P.E.Cでは日英・英日翻訳の業務も承っております。</b>
+                    <b>Benesseこども教室の松江教室を運営する有限会社P.E.Cでは日英・英日翻訳の業務も承っております。</b>
                   </div>
                 </div>
               </div>
@@ -553,7 +506,7 @@ export default class App extends Component {
         <footer>
           <p>Benesseこども英語教室 松江教室</p>
           <p>〒 609-0826 島根県松江市学園南2丁目5-13 ハーベストビル3F : TEL 0852-21-1802</p>
-          <p>株式会社P.E.Cは株式会社ベネッセコーポレーションと提携してBenesseこども教室を運営しております。</p>
+          <p>有限会社P.E.Cは株式会社ベネッセコーポレーションと提携してBenesseこども教室を運営しております。</p>
           <p>Copyright (c) P.E.C  All right reserved.</p>
         </footer>
       </div>
